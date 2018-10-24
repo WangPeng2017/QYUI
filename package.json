@@ -1,6 +1,6 @@
 {
-  "name": "qui",
-  "version": "1.1.0",
+  "name": "qxui",
+  "version": "1.1.2",
   "description": "This is a UI components for Vue 2.x ",
   "author": "wangpeng <729305971@qq.com>",
   "main": "packages/index.js",
