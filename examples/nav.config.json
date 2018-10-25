@@ -34,14 +34,14 @@
         "path": "/layout"
       },
       {
-        "desc": "Button 按钮",
-        "name": "button",
-        "path": "/button"
-      },
-      {
         "desc": "TreeLeaf 面板",
         "name": "tree-leaf",
         "path": "/tree-leaf"
+      },
+      {
+        "desc": "Tree 折叠框",
+        "name": "tree",
+        "path": "/tree"
       }
     ]
   }]

@@ -1,6 +1,6 @@
 <template>
   <div class="cells">
-    <cell :title="leafData.title + getStudentNumber(leafData.extra)" :value="leafData.value" :is-link="leafData.islink" :link="leafData.link" :arrow-direction="direction" @click.native="openChild(leafData)">
+    <cell :title="leafData.title + getStudentNumber(leafData.extra)" :value="leafData.value" :is-link="leafData.islink" :link="leafData.link" :arrow-direction="direction" @click.native.stop="changeLeaf(leafData)">
       <CheckIcon slot="icon" :value.sync="leafData.checked" @click.native.stop="clickLeaf(leafData, $event)" v-if="leafData.checked === undefined ? false : true"></CheckIcon>
       <span v-if="leafData.childData
         && leafData.canGet
@@ -82,9 +82,9 @@ export default {
         }
       }
     },
-    openChild: function(leafData) {
+    changeLeaf: function(leafData) {
       leafData.open !== undefined ? (leafData.open = !leafData.open) : "";
-      this.$emit("openLeaf", leafData);
+      this.$emit("changeLeaf", leafData);
     },
     getStudentNumber(text) {
       if (text) {

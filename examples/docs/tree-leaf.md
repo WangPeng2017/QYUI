@@ -170,4 +170,15 @@ TreeLeaf 面板组件，依赖vux组件库，使用时应在本组件外包裹 G
 | data.extra     | 左边标题拓展文字，无值不显示，有值则在标题后括号内显示   | string    |  —  |  —   |
 | data.islink  | 是否为链接，如果是，右侧将会出现指引点击的右箭头    | boolean   | true/false   | false   |
 | data.link  | 点击链接，可以为http(s)协议，也可以是 vue-router 支持的地址形式 | string object   |  —  |  —  |
+| data.canGet  | 是否可以异步获取子级数据 | boolean   |  true/false  |  false  |
 | data.checked  | 是否选中，无数据则不显示多选框 | boolean   |  true/false  |  false  |
+| data.open  | 是否打开（关联右箭头方向） | boolean   |  空/true/false  |  false  |
+| data.childData  | 子级数据,与canGet参数一起使用，可异步获取子级数据 | array   |    |    |
+
+
+### Event
+
+| 事件名称	      | 说明	    | 回调参数 |
+|---------- |-------- |---------- |
+| changeLeaf | 切换该面板下级节点展开状态，返回操作后的数据  | — |
+| clickLeaf | 切换该面板节点选中状态，返回操作后的数据  | — |
