@@ -7,8 +7,17 @@ import demoBlock from './components/demo-block.vue'
 import WXQYUI from '../packages/index'
 import '../packages/theme-default/lib/index.css'
 
+import {
+  Group
+} from 'vux'
+
+Vue.component('Group', Group)
+
 Vue.component('demo-block', demoBlock)
 Vue.use(WXQYUI)
+
+
+
 
 Vue.config.productionTip = false
 

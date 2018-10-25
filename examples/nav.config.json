@@ -37,6 +37,11 @@
         "desc": "Button 按钮",
         "name": "button",
         "path": "/button"
+      },
+      {
+        "desc": "TreeLeaf 面板",
+        "name": "tree-leaf",
+        "path": "/tree-leaf"
       }
     ]
   }]

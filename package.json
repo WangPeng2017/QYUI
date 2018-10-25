@@ -1,5 +1,5 @@
 {
-  "name": "qxui",
+  "name": "qyui",
   "version": "1.1.2",
   "description": "This is a UI components for Vue 2.x ",
   "author": "wangpeng <729305971@qq.com>",
@@ -26,11 +26,12 @@
     "moment": "^2.19.2",
     "path": "^0.12.7",
     "prerender-spa-plugin": "^2.1.0",
-    "semver": "^5.4.1",
     "transliteration": "^1.6.2",
     "vue": "^2.5.2",
     "vue-markdown-loader": "^2.2.3",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vux": "^2.9.2",
+    "vux-loader": "^1.2.9"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

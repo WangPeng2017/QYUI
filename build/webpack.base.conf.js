@@ -7,6 +7,8 @@ const vueLoaderConfig = require('./vue-loader.conf')
 const MarkdownItContainer = require('markdown-it-container')
 const striptags = require('./strip-tags')
 
+const vuxLoader = require('vux-loader')
+
 const vueMarkdown = {
   preprocess: (MarkdownIt, source) => {
     MarkdownIt.renderer.rules.table_open = function () {
@@ -60,7 +62,7 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-module.exports = {
+const originalConfig = {
   entry: {
     app: './examples/main.js'
   },
@@ -130,3 +132,9 @@ module.exports = {
     ]
   }
 }
+
+const webpackConfig = originalConfig // 原来的 module.exports 代码赋值给变量 webpackConfig
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  plugins: ['vux-ui']
+})
