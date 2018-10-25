@@ -2,7 +2,7 @@
  * @Author: wangpeng 
  * @Date: 2018-10-24 16:20:12 
  * @Last Modified by: wangpeng
- * @Last Modified time: 2018-10-24 18:55:48
+ * @Last Modified time: 2018-10-25 08:14:35
  */
 
 require('./check-versions')();
@@ -29,14 +29,21 @@ inquirer.prompt([{
   type: 'input',
   default: ''
 }]).then(function (answers) {
-  // let build = answers.conform ? 'npm run build &&' : '';
-  // var cmd = `${build} 
-  // git add . && 
-  // git commit -m '${answers.message}' &&
-  // git push`;
-  // console.log(cmd)
+  let build = answers.conform ? 'npm run build &&' : '';
+  var cmd = `${build} 
+  git checkout gh-pages && 
+  rm -rf index.html && 
+  rm -rf static && 
+  cd dist && 
+  mv * ../ &&
+  rm -rf ./dist && 
+  cd .. &&
+  git add . && 
+  git commit -m '${answers.message}' &&
+  git push`;
+  console.log(cmd)
 
-  // exec(cmd);
+  exec(cmd);
 
   console.log();
   console.log(chalk.green(`   发布成功 ) `));
